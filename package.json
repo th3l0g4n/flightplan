@@ -31,7 +31,7 @@
     "fly": "./bin/fly.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./test/run.sh"
   },
   "dependencies": {
     "colors": "~0.6.2",

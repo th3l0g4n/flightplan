@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  #- "0.11"
+  - "0.10"
+  #- "0.8"
+  #- "0.6"
+
+env:
+  global:
+    - SSH_AUTH_SOCK=/tmp/ssh-auth-sock
+    - SSH_USER=alice
+    - SUDO_USER=bob
+
+before_install:
+  - ./test/before_install.sh
+
+before_script:
+  - sudo mv /etc/profile /etc/profile-disabled
+
+after_script:
+  - sudo mv /etc/profile-disabled /etc/profile
